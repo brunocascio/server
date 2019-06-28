@@ -1,0 +1,8 @@
+version: '3.6'
+services:
+  localtunnel:
+    image: "defunctzombie/localtunnel-server:latest"
+    container_name: "localtunnel"
+    network_mode: "host"
+    command: "--port 80 --domain $DOMAIN"
+    restart: "always"
